@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Home from './Home'
 import About from './About'
+import Feed from './Feed'
 
 import {
   BackAndroid,
@@ -30,7 +31,16 @@ class NavRoot extends Component {
       return <Home _handleNavigate={this._handleNavigate.bind(this)} />
     }
     if (scene.key === prefix + 'about') {
-      return <About _goBack={this._handleBackAction.bind(this)} />
+      return <About
+      _handleNavigate={this._handleNavigate.bind(this)}
+      _goBack={this._handleBackAction.bind(this)} 
+    />
+    }
+    if (scene.key === prefix + 'feed') {
+      return <Feed
+        _handleNavigate={this._handleNavigate.bind(this)}
+        _goBack={this._handleBackAction.bind(this)}
+      />
     }
   }
   _handleBackAction () {

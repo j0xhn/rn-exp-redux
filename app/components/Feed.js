@@ -7,18 +7,17 @@ import {
 import Button from './Button'
 import {feedRoute, aboutRoute} from '../routes'
 
-const About = ({_goBack, _handleNavigate}) => (
+const Feed = ({_goBack, _handleNavigate}) => (
   <View style={styles.container}>
-    <Text style={styles.title}>About</Text>
+    <Text style={styles.title}>Feed</Text>
     <Button onPress={_goBack} label='Go Back' />
-    <Button onPress={() => _handleNavigate(feedRoute)} label='home' />
+    <Button onPress={() => _handleNavigate(aboutRoute)} label='Go About' />
   </View>
 )
 
 const styles = StyleSheet.create({
   title: {
     marginBottom: 20,
-    fontSize: 22,
     textAlign: 'center'
   },
   container: {
@@ -26,4 +25,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default About
+export default Feed

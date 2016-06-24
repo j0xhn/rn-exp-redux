@@ -20,7 +20,9 @@ function navigationState (state = initialState, action) {
     case PUSH_ROUTE:
       console.log('state: ', state)
       console.log('action: ', action)
-      if (state.routes[state.index].key === (action.route && action.route.key)) return state
+      debugger
+      if (state.routes[state.index].key === (action.route && action.route.key)) return state // keeps on same page
+      const arrayOfMatches = state.routes.filter(function(route, index){if (route.key === state.routes[state.index].key) return index})
       return NavigationStateUtils.push(state, action.route)
 
     case POP_ROUTE:

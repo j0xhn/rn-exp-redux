@@ -21,8 +21,16 @@ function navigationState (state = initialState, action) {
       console.log('state: ', state)
       console.log('action: ', action)
       debugger
-      if (state.routes[state.index].key === (action.route && action.route.key)) return state // keeps on same page
-      const arrayOfMatches = state.routes.filter(function(route, index){if (route.key === state.routes[state.index].key) return index})
+      // keeps on same page
+      if (state.routes[state.index].key === (action.route && action.route.key)) return state
+
+      // one of these should work, hopefully the second
+      // const arrayOfMatchesgs = state.routes.filter(function(route, index){if (route.key === state.routes[state.index].key) return index})
+      const indexOfMatch = state.routes.map((e) => { return e.key; }).indexOf(action.route.key);
+
+      // remove all other routes that happened after desired route
+      if (indexOfMatch > -1) state.routes.length = indexOfMatch
+
       return NavigationStateUtils.push(state, action.route)
 
     case POP_ROUTE:

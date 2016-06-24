@@ -10,8 +10,9 @@ import {feedRoute, aboutRoute} from '../routes'
 const About = ({_goBack, _handleNavigate}) => (
   <View style={styles.container}>
     <Text style={styles.title}>About</Text>
+    <Text style={styles.title}>Feed</Text>
     <Button onPress={_goBack} label='Go Back' />
-    <Button onPress={() => _handleNavigate(feedRoute)} label='home' />
+    <Button onPress={() => _handleNavigate(feedRoute)} label='Go Feed' />
   </View>
 )
 

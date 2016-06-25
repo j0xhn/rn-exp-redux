@@ -13,3 +13,11 @@ export const aboutRoute = {
     title: 'About'
   }
 }
+
+export const openDrawer = {
+  type: 'drawer',
+  route: {
+    key: 'open',
+    title: 'Drawer'
+  }
+}

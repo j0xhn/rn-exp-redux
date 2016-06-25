@@ -5,13 +5,15 @@ import {
   StyleSheet
 } from 'react-native'
 import Button from './Button'
-import {feedRoute, aboutRoute} from '../routes'
+import {feedRoute, aboutRoute, openDrawer} from '../routes'
+
 
 const Home = ({_handleNavigate}) => (
   <View style={styles.container}>
     <Text style={styles.title}>Home</Text>
     <Button onPress={() => _handleNavigate(aboutRoute)} label='Go To About' />
     <Button onPress={() => _handleNavigate(feedRoute)} label='Go To Feed' />
+    <Button onPress={() => _handleNavigate(openDrawer)} label='Open Drawer' />
   </View>
 )
 

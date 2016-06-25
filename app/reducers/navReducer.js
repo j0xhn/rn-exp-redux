@@ -16,22 +16,22 @@ const initialState = {
 }
 
 function navigationState (state = initialState, action) {
+  console.log(state.index)
   switch (action.type) {
     case PUSH_ROUTE:
       console.log('state: ', state)
       console.log('action: ', action)
-      debugger
       // keeps on same page
       if (state.routes[state.index].key === (action.route && action.route.key)) return state
 
-      // one of these should work, hopefully the second
-      // const arrayOfMatchesgs = state.routes.filter(function(route, index){if (route.key === state.routes[state.index].key) return index})
-      const indexOfMatch = state.routes.map((e) => { return e.key; }).indexOf(action.route.key);
+      // handles if I try to go to route that already exists in stack
+      const indexOfMatch = NavigationStateUtils.indexOf(state, action.route.key)
+      if (indexOfMatch){
+        return NavigationStateUtils.jumpToIndex(state, indexOfMatch)
+      } else {
+        return NavigationStateUtils.push(state, action.route)
+      }
 
-      // remove all other routes that happened after desired route
-      if (indexOfMatch > -1) state.routes.length = indexOfMatch
-
-      return NavigationStateUtils.push(state, action.route)
 
     case POP_ROUTE:
       if (state.index === 0 || state.routes.length === 1) return state

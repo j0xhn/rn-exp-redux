@@ -1,5 +1,6 @@
 import React from 'react'
 import { AppRegistry } from 'react-native'
+import SideMenu from 'react-native-side-menu'
 
 import configureStore from './app/store/configureStore'
 const store = configureStore()
@@ -9,7 +10,9 @@ import { Provider } from 'react-redux'
 
 const App = () => (
   <Provider store={store}>
-    <NavigationRootContainer />
+    <SideMenu>
+      <NavigationRootContainer />
+    </SideMenu>
   </Provider>
 )
 AppRegistry.registerComponent('RNExperimentalRedux', () => App)

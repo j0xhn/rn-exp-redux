@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Home from './Home'
 import About from './About'
-import Feed from './Feed'
+import Story from './Story'
 
 import {
   BackAndroid,
@@ -36,8 +36,8 @@ class NavRoot extends Component {
       _goBack={this._handleBackAction.bind(this)} 
     />
     }
-    if (scene.key === prefix + 'feed') {
-      return <Feed
+    if (scene.key === prefix + 'story') {
+      return <Story
         _handleNavigate={this._handleNavigate.bind(this)}
         _goBack={this._handleBackAction.bind(this)}
       />

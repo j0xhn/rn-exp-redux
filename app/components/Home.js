@@ -5,15 +5,19 @@ import {
   StyleSheet
 } from 'react-native'
 import Button from './Button'
-import {feedRoute, aboutRoute, openDrawer} from '../routes'
+import Header from './Header'
+import {storyRoute, aboutRoute, openDrawer} from '../routes'
 
 
 const Home = ({_handleNavigate}) => (
-  <View style={styles.container}>
-    <Text style={styles.title}>Home</Text>
-    <Button onPress={() => _handleNavigate(aboutRoute)} label='Go To About' />
-    <Button onPress={() => _handleNavigate(feedRoute)} label='Go To Feed' />
-    <Button onPress={() => _handleNavigate(openDrawer)} label='Open Drawer' />
+  <View>
+    <Header label='header' />
+    <View style={styles.container}>
+      <Text style={styles.title}>Home</Text>
+      <Button onPress={() => _handleNavigate(aboutRoute)} label='Go To About' />
+      <Button onPress={() => _handleNavigate(storyRoute)} label='Go To Story' />
+      <Button onPress={() => _handleNavigate(openDrawer)} label='Open Drawer' />
+    </View>
   </View>
 )
 
@@ -24,7 +28,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   container: {
-    paddingTop: 60
+    paddingTop: 10
   }
 })
 

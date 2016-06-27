@@ -5,13 +5,13 @@ import {
   StyleSheet
 } from 'react-native'
 import Button from './Button'
-import {feedRoute, aboutRoute} from '../routes'
+import {storyRoute, aboutRoute} from '../routes'
 
 const About = ({_goBack, _handleNavigate}) => (
   <View style={styles.container}>
     <Text style={styles.title}>About</Text>
     <Button onPress={_goBack} label='Go Back' />
-    <Button onPress={() => _handleNavigate(feedRoute)} label='Go Feed' />
+    <Button onPress={() => _handleNavigate(storyRoute)} label='Go Story' />
   </View>
 )
 

@@ -1,8 +1,8 @@
-export const feedRoute = {
+export const storyRoute = {
   type: 'push',
   route: {
-    key: 'feed',
-    title: 'Feed'
+    key: 'story',
+    title: 'Story'
   }
 }
 

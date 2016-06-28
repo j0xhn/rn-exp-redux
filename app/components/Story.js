@@ -9,6 +9,7 @@ import {
   StyleSheet
 } from 'react-native'
 import Button from './Button'
+import Header from './Header'
 import {storyRoute, aboutRoute} from '../routes'
 
 class Story extends Component {
@@ -17,52 +18,49 @@ class Story extends Component {
     _handleNavigate: PropTypes.func
   };
 
+  state={text: 'text', 'moreText': 'more text'}
+
   render () {
     const {_goBack, _handleNavigate } = this.props
 
-    state = {text: '', moreText: ''}
+    state = {text: 'text', moreText: 'more text'}
+
     return (
-    <View style={styles.container}>
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-        Text Input Example
-        </Text>
+      <View>
+        <Header label='Story Title' backFunction={_goBack} />
+        <View style={styles.container}>
+          <TextInput
+          style={styles.textEdit}
+          onChangeText={(text) => this.setState({text})}
+          placeholder="First Input"
+          />
+          <TextInput
+          style={styles.textEdit}
+          onChangeText={(moreText) => this.setState({moreText})}
+          placeholder="Second Input"
+          />
 
-        <Text style={styles.instructions}>
-        sample text
-        </Text>
-
-        <TextInput
-        style={styles.textEdit}
-        onChangeText={(text) => this.setState({text})}
-        placeholder="What you gotta say?"
-        />
-
-        <Text style={styles.instructions}>
-        sample More Text
-        </Text>
-
-        <TextInput
-        style={styles.textEdit}
-        onChangeText={(moreText) => this.setState({moreText})}
-        defaultValue="Iron Maiden, Up the Irons"
-        />
+          <Text>
+            Here is text with an element from
+            before here <Text>{this.state.text}</Text>
+            and then more text here <Text>{this.state.moreText}</Text>
+            that is from the second Input
+          </Text>
+        </View>
+        <Button onPress={() => _handleNavigate(aboutRoute)} label='Go About' />
       </View>
-      <Button onPress={_goBack} label='Go Back' />
-      <Button onPress={() => _handleNavigate(aboutRoute)} label='Go About' />
-    </View>
-  )
-}
+    )
+  }
 }
 
 var styles = StyleSheet.create({
+  container: {
+    padding: 10
+  },
   title: {
     marginBottom: 20,
     fontSize: 22,
     textAlign: 'center'
-  },
-  container: {
-    paddingTop: 60
   },
   welcome: {
     fontSize: 28,
@@ -78,8 +76,10 @@ var styles = StyleSheet.create({
     height: 40,
     borderColor: 'grey',
     backgroundColor: 'white',
-    borderWidth: 1
-  },
+    borderWidth: 1,
+    marginBottom: 10,
+    padding: 5
+  }
 });
 
 export default Story

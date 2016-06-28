@@ -1,8 +1,8 @@
-export const feedRoute = {
+export const storyRoute = {
   type: 'push',
   route: {
-    key: 'feed',
-    title: 'Feed'
+    key: 'story',
+    title: 'Story'
   }
 }
 
@@ -11,5 +11,13 @@ export const aboutRoute = {
   route: {
     key: 'about',
     title: 'About'
+  }
+}
+
+export const openDrawer = {
+  type: 'drawer',
+  route: {
+    key: 'open',
+    title: 'Drawer'
   }
 }

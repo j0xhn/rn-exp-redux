@@ -30,4 +30,4 @@ const App = () => (
     </Drawer>
   </Provider>
 )
-AppRegistry.registerComponent('RNExperimentalRedux', () => App)
+AppRegistry.registerComponent('StoryTime', () => App)

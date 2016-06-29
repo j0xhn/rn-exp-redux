@@ -8,9 +8,10 @@ import {
   TextInput,
   StyleSheet
 } from 'react-native'
-import Button from './Button'
-import Header from './Header'
-import {storyRoute, aboutRoute} from '../routes'
+import Button from 'StoryTime/app/components/Button'
+import Header from 'StoryTime/app/components/Header'
+
+import {storyRoute, aboutRoute} from 'StoryTime/app/routes'
 
 class Story extends Component {
   static propTypes = {
@@ -26,7 +27,7 @@ class Story extends Component {
     state = {text: 'text', moreText: 'more text'}
 
     return (
-      <View>
+      <View style={styles.background}>
         <Header label='Story Title' backFunction={_goBack} />
         <View style={styles.container}>
           <TextInput
@@ -54,8 +55,11 @@ class Story extends Component {
 }
 
 var styles = StyleSheet.create({
+  background: {
+    backgroundColor: 'white'
+  },
   container: {
-    padding: 10
+    padding: 10,
   },
   title: {
     marginBottom: 20,

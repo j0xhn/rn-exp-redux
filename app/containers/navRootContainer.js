@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import NavigationRoot from '../components/NavRoot'
-import { push, pop } from '../actions/navActions'
+import NavigationRoot from 'StoryTime/app/pages/NavRoot.js'
+import { push, pop } from 'StoryTime/app/actions/navActions'
 function mapStateToProps (state) {
   return {
     navigation: state.navReducer

@@ -4,8 +4,8 @@ import {
   Text,
   StyleSheet
 } from 'react-native'
-import Button from 'StoryTime/app/components/Button'
-import {storyRoute, aboutRoute} from 'StoryTime/app/routes'
+import Button from 'storytime/app/components/Button'
+import {storyRoute, aboutRoute} from 'storytime/app/routes'
 
 const About = ({_goBack, _handleNavigate}) => (
   <View style={styles.container}>

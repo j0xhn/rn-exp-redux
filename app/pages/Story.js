@@ -8,10 +8,10 @@ import {
   TextInput,
   StyleSheet
 } from 'react-native'
-import Button from 'StoryTime/app/components/Button'
-import Header from 'StoryTime/app/components/Header'
+import Button from 'storytime/app/components/Button'
+import Header from 'storytime/app/components/Header'
 
-import {storyRoute, aboutRoute} from 'StoryTime/app/routes'
+import {storyRoute, aboutRoute} from 'storytime/app/routes'
 
 class Story extends Component {
   static propTypes = {
@@ -19,12 +19,10 @@ class Story extends Component {
     _handleNavigate: PropTypes.func
   };
 
-  state={text: 'text', 'moreText': 'more text'}
+  state={text: '____', 'moreText': '____'}
 
   render () {
     const {_goBack, _handleNavigate } = this.props
-
-    state = {text: 'text', moreText: 'more text'}
 
     return (
       <View style={styles.background}>
@@ -43,8 +41,8 @@ class Story extends Component {
 
           <Text>
             Here is text with an element from
-            before here <Text>{this.state.text}</Text>
-            and then more text here <Text>{this.state.moreText}</Text>
+            before here <Text style={styles.placeholder}>{this.state.text} </Text>
+            and then more text here <Text style={styles.placeholder}>{this.state.moreText} </Text>
             that is from the second Input
           </Text>
         </View>
@@ -57,6 +55,10 @@ class Story extends Component {
 var styles = StyleSheet.create({
   background: {
     backgroundColor: 'white'
+  },
+  placeholder: {
+    width: 100,
+    color: 'blue'
   },
   container: {
     padding: 10,
@@ -78,9 +80,10 @@ var styles = StyleSheet.create({
   },
   textEdit: {
     height: 40,
-    borderColor: 'grey',
+    borderColor: '#eee',
     backgroundColor: 'white',
     borderWidth: 1,
+    borderRadius: 5,
     marginBottom: 10,
     padding: 5
   }

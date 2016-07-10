@@ -24,4 +24,4 @@ const App = () => (
     </Drawer>
   </Provider>
 )
-AppRegistry.registerComponent('StoryTime', () => App)
+AppRegistry.registerComponent('storytime', () => App)

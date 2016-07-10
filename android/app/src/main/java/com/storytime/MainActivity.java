@@ -15,7 +15,7 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "StoryTime";
+        return "storytime";
     }
 
     /**
@@ -24,7 +24,7 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected boolean getUseDeveloperSupport() {
-        return BuildConfig.DEBUG;
+        return false;
     }
 
     /**

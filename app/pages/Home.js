@@ -4,9 +4,9 @@ import {
   Text,
   StyleSheet
 } from 'react-native'
-import Button from 'StoryTime/app/components/Button'
-import Header from 'StoryTime/app/components/Header'
-import {storyRoute, aboutRoute, openDrawer} from 'StoryTime/app/routes'
+import Button from 'storytime/app/components/Button'
+import Header from 'storytime/app/components/Header'
+import {storyRoute, aboutRoute, openDrawer} from 'storytime/app/routes'
 
 
 const Home = ({_handleNavigate}) => (

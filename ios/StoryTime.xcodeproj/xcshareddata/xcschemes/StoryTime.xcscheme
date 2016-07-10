@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "StoryTime.app"
-               BlueprintName = "StoryTime"
-               ReferencedContainer = "container:StoryTime.xcodeproj">
+               BuildableName = "storytime.app"
+               BlueprintName = "storytime"
+               ReferencedContainer = "container:storytime.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "StoryTimeTests.xctest"
-               BlueprintName = "StoryTimeTests"
-               ReferencedContainer = "container:StoryTime.xcodeproj">
+               BuildableName = "storytimeTests.xctest"
+               BlueprintName = "storytimeTests"
+               ReferencedContainer = "container:storytime.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "StoryTimeTests.xctest"
-               BlueprintName = "StoryTimeTests"
-               ReferencedContainer = "container:StoryTime.xcodeproj">
+               BuildableName = "storytimeTests.xctest"
+               BlueprintName = "storytimeTests"
+               ReferencedContainer = "container:storytime.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "StoryTime.app"
-            BlueprintName = "StoryTime"
-            ReferencedContainer = "container:StoryTime.xcodeproj">
+            BuildableName = "storytime.app"
+            BlueprintName = "storytime"
+            ReferencedContainer = "container:storytime.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "StoryTime.app"
-            BlueprintName = "StoryTime"
-            ReferencedContainer = "container:StoryTime.xcodeproj">
+            BuildableName = "storytime.app"
+            BlueprintName = "storytime"
+            ReferencedContainer = "container:storytime.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "StoryTime.app"
-            BlueprintName = "StoryTime"
-            ReferencedContainer = "container:StoryTime.xcodeproj">
+            BuildableName = "storytime.app"
+            BlueprintName = "storytime"
+            ReferencedContainer = "container:storytime.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

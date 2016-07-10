@@ -1,5 +1,4 @@
 import React from 'react'
-import ScrollableTabView from 'react-native-scrollable-tab-view'
 import { AppRegistry } from 'react-native'
 import Drawer from 'react-native-drawer'
 
@@ -30,4 +29,4 @@ const App = () => (
     </Drawer>
   </Provider>
 )
-AppRegistry.registerComponent('StoryTime', () => App)
+AppRegistry.registerComponent('storytime', () => App)

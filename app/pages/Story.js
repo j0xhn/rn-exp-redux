@@ -10,6 +10,7 @@ import {
 } from 'react-native'
 import Button from 'storytime/app/components/Button'
 import Header from 'storytime/app/components/Header'
+import sampleStory from 'storytime/app/store/sampleStory'
 
 import {storyRoute, aboutRoute} from 'storytime/app/routes'
 
